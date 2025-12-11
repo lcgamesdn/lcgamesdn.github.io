@@ -185,16 +185,17 @@
     const link = document.getElementById("store-link");
   
     const androidURL = "https://play.google.com/store/apps/developer?id=katplay";
-    const iosURL = "https://apps.apple.com/us/developer/an-pham/id1825280729";
+    // const iosURL = "https://apps.apple.com/us/developer/an-pham/id1825280729";
+    const iosURL = "itms-apps://apps.apple.com/us/developer/an-pham/id1825280729";
   
     if (/android/i.test(userAgent)) {
       link.href = androidURL;
-      link.textContent = "Visit Katplay on Google Play";
+      // link.textContent = "Visit Katplay on Google Play";
     } else if (/iPad|iPhone|iPod/.test(userAgent)) {
       link.href = iosURL;
-      link.textContent = "Visit Katplay on the App Store";
+      // link.textContent = "Visit Katplay on the App Store";
     } else {
-      // fallback nếu không phải mobile hoặc không detect được
+      // fallback
       link.href = androidURL;
       //link.textContent = "Visit Katplay on Google Play";
     }
